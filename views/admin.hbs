@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="row mt-4">
+        <a href="admin/add-prdct" class="btn btn-success">Add</a>
+    </div>
+    <div class="mt-1">
+        <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Detail</th>
+      <th scope="col">Price</th>
+      <th scope="col">Image</th>
+      <th scope="col">Edit</th>
+    </tr>
+  </thead>
+   {{#each prdct}}
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>{{this.Name}}</td>
+      <td>{{this.Detail}}</td>
+      <td>{{this.price}}</td>
+      <td><img src="/prdct-image/{{this._id}}.jpg" style="width: 100px;" alt=""></td>
+      <td> <a href="/admin/delete-prdct/{{this._id}}" class="btn btn-danger" onclick="confirm('Are you sure to delete {{this.Name}}')">Delete</a><br>
+      <a href="/admin/edit-prdct/{{this._id}}" class="btn btn-primary mt-1">Edit</a> </td>
+    </tr>
+  </tbody>
+  {{/each}}
+</table>
+    </div>
+</div>

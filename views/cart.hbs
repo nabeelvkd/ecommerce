@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-3"></div>
+    <div class="mt-4 col-md-6 shadow p-3 mb-5 bg-body rounded">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Item</th>
+            <th scope="col">Name</th>
+            <th scope="col">Quantity</th>
+            <th></th>
+          </tr>
+        </thead>
+        {{#each prdct}}
+        <tbody>
+          <tr>
+            <td><img src="/prdct-image/{{this._id}}.jpg" style="width: 70px;" alt=""></td>
+            <td>{{this.Name}}</td>
+            <td>
+              <button class="mr-5 cart-item-count btn btn-success">-</button>1<button
+                class="ml-5 cart-item-count btn btn-success">+</button>
+            </td>
+            <td><a href="cart/delete" class="btn btn-danger">Remove</a></td>
+          </tr>
+        </tbody>
+        {{/each}}
+      </table>
+    </div>
+  </div>
+</div>

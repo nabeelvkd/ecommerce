@@ -1,0 +1,18 @@
+<section>
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-md-4">
+                <form action="/edit-prdct/{{prdct._id}}" enctype="multipart/form-data" method="POST">
+                    <input type="text" placeholder="Name" name="Name" class="form-control"  value="{{prdct.Name}}"><br>
+                    <input type="text" placeholder="Detail" name="Detail" class="form-control" value="{{prdct.Detail}}"><br>
+                    <input type="text" placeholder="Cat" name="Cat" class="form-control" value="{{prdct.cat}}"><br>
+                    <input type="text" placeholder="Price" name="Price" class="form-control" value="{{prdct.price}}"><br>
+                    <img src="/prdct-image/{{prdct._id}}.jpg" alt="" style="height: 200px;"><br>
+                    <input type="file" name="Image" class="form-control mt-1"><br>
+                    <button type="submit" class="btn btn-success">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="container"></div>
